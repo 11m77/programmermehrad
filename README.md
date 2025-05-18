@@ -1,4 +1,4 @@
-mehead/a1.jpg
+
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
@@ -9,28 +9,11 @@ mehead/a1.jpg
 :root{--bg:#fff;--text:#111;--card:#f4f4f4;--primary:#4e89ff}
 [data-theme=dark]{--bg:#111;--text:#eee;--card:#1e1e1e}a1.jpg
 	
-Add files via upload
+
 	
-May 18, 2025
-a10.jpg
+
 	
-Add files via upload
-	
-May 18, 2025
-a2.jpg
-	
-Add files via upload
-	
-May 18, 2025
-a3.jpg
-	
-Add files via upload
-	
-May 18, 2025
-a4.jpg
-	
-Add files via upload
-	
+
 May 18, 2025
 a5.jpg
 	
@@ -233,7 +216,7 @@ footer{text-align:center;padding:2rem;color:var(--text);background:var(--card);f
     <div class="banner">
       <div class="slider" style="--quantity: 10">
           
-        <div class="item" style="--position: 1"><img src="bak1.jpg" alt=""></div>
+        <div class="item" style="--position: 1"><img src="bak1.jpg" alt="" style="width: 100%></div>
             <div class="item" style="--position: 2"><img src="bak2.jpg" alt="" style="width: 100%;"></div>
             <div class="item" style="--position: 3"><img src="bak3.jpg" alt="" style="width: 100%;"></div>
             <div class="item" style="--position: 4"><img src="bak4.jpg" alt="" style="width: 100%;"></div>
