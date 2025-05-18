@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+mehead/a1.jpg
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
