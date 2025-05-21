@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
@@ -6,8 +6,8 @@
 <title>برنامه نویسی مهراد</title>
 
 <style>
-:root{--bg:#fff;--text:#111;--card:#f4f4f4;--primary:#4e89ff}
-[data-theme=dark]{--bg:#111;--text:#eee;--card:#1e1e1e}
+:root{--bg:#fff;--text:#000000;--card:#f4f4f4;--primary:#4e89ff}
+[data-theme=dark]{--bg:#000000;--text:#eee;--card:#1e1e1e}
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:tahoma,Arial}
 html{scroll-behavior:smooth}
@@ -67,7 +67,7 @@ box-shadow:0 14px 32px #0004;display:flex;flex-direction:column;gap:1.4rem}
 .login-box h2{margin-bottom:.4rem}
 .login-box input{padding:1rem;border:2px solid var(--primary);border-radius:12px;font-size:1rem;background:var(--bg);color:var(--text)}
 .login-box input:focus{outline:none;border-color:#234ebd}
-.login-box button{background:var(--primary);border:none;color:#fff;padding:.9rem;border-radius:26px;font-weight:700;cursor:pointer}
+.login-box button{background:var(--primary);border:none;color:#fff;padding:.9rem;border-radius:26px;font-weight:0;cursor:pointer}
 .login-box button:hover{background:#234ebd}
 .login-box a{align-self:flex-end;font-size:.85rem;color:var(--primary);text-decoration:none}
 .login-box a:hover{text-decoration:underline}
@@ -161,6 +161,8 @@ footer{text-align:center;padding:2rem;color:var(--text);background:var(--card);f
           <div class="model"></div>
       </div>
   </div>
+
+  
 
 
 
@@ -301,8 +303,6 @@ footer{text-align:center;padding:2rem;color:var(--text);background:var(--card);f
 }
 </style>
 
-
-
     <div class="cards">
       
       <div class="card">
@@ -348,6 +348,30 @@ footer{text-align:center;padding:2rem;color:var(--text);background:var(--card);f
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
   <!-- فرم ورود -->
   <section id="login">
     <h2 class="section-title">فرم تماس </h2>
@@ -361,9 +385,358 @@ footer{text-align:center;padding:2rem;color:var(--text);background:var(--card);f
   </section>
 </main>
 
-<footer>&copy; ۲۰۲۵ برنامه نویسی مهراد. تمامی حقوق محفوظ است.</footer>
+
+
+
+
+
+
+<center>
+
+
+<h1 style="color: #004b95;border-width:10px;border-color: #fff;">نظر ها</h1>
+
+</center>
+
+
+
+
+
+
+<style>
+    
+
+  .container {
+    width: 80%;
+    max-width: 550px;
+    padding: 20px;
+    box-sizing:30%;
+  }
+
+  h2, h3 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+
+  .comment-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.7s ease;
+  }
+
+  input, textarea {
+    width: 90%;
+    padding: 14px;
+    margin-bottom: 9px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #3b82f6;
+  }
+
+  button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s;
+   
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+
+  button:active::after {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #comments {
+    margin-top: 30px;
+  }
+
+  .comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #eef2ff;
+    padding: 15px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/149/149071.png');
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  .comment-text {
+    flex-grow: 1;
+  }
+
+  .comment-author {
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 5px;
+  }
+
+  .comment-actions {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .comment-actions button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #3b82f6;
+    font-size: 14px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  .comment-actions button:hover {
+    background-color: #bfdbfe;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+
+    .comment-box {
+      padding: 20px;
+    }
+
+    input, textarea {
+      font-size: 15px;
+    }
+
+    button {
+      font-size: 15px;
+    }
+  }
+</style>
+<center>
+ 
+  <br>
+  <br>
+
+<div class="container">
+  <h2>دوست عزیز نظر خود را درباره سایت و آموزش ها  با مادرمیان بگذارید.</h2>
+  <div class="comment-box">
+    <input type="text" id="username" placeholder="نام شما">
+    <textarea id="commentInput" rows="4" placeholder="نظر خود را بنویسید..."></textarea>
+    <div id="error" class="error"></div>
+    <button onclick="submitComment()">ارسال نظر</button>
+  </div>
+</center>
+  <div id="comments" style="color: #1d4ed8;">
+    <h3>نظرات کاربران:</h3>
+  </div>
+</div>
 
 <script>
+  let comments = [];
+
+  // بارگذاری نظرات از localStorage
+  function loadComments() {
+    const saved = localStorage.getItem('comments');
+    if (saved) {
+      comments = JSON.parse(saved);
+    } else {
+      comments = [];
+    }
+    renderComments();
+  }
+
+  // ذخیره نظرات در localStorage
+  function saveComments() {
+    localStorage.setItem('comments', JSON.stringify(comments));
+  }
+
+  // نمایش نظرات
+  function renderComments() {
+    const container = document.getElementById('comments');
+    container.innerHTML = '<h3>نظرات کاربران:</h3>';
+
+    comments.forEach((c, index) => {
+      const commentDiv = document.createElement('div');
+      commentDiv.className = 'comment';
+
+      const profile = document.createElement('div');
+      profile.className = 'profile-pic';
+
+      const textDiv = document.createElement('div');
+      textDiv.className = 'comment-text';
+
+      const author = document.createElement('div');
+      author.className = 'comment-author';
+      author.textContent = c.name;
+
+      const message = document.createElement('div');
+      message.textContent = c.text;
+
+      // دکمه‌های ویرایش و حذف
+      const actions = document.createElement('div');
+      actions.className = 'comment-actions';
+
+      const editBtn = document.createElement('button');
+      editBtn.textContent = '';
+      editBtn.onclick = () => editComment(index);
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = '';
+      deleteBtn.onclick = () => deleteComment(index);
+
+      actions.appendChild(editBtn);
+      actions.appendChild(deleteBtn);
+
+      textDiv.appendChild(author);
+      textDiv.appendChild(message);
+      commentDiv.appendChild(profile);
+      commentDiv.appendChild(textDiv);
+      commentDiv.appendChild(actions);
+
+      container.appendChild(commentDiv);
+
+      // انیمیشن نمایش
+      setTimeout(() => {
+        commentDiv.style.opacity = '1';
+        commentDiv.style.transform = 'translateY(0)';
+      }, 50);
+    });
+  }
+
+  // ارسال نظر جدید یا ذخیره ویرایش
+  function submitComment() {
+    const nameInput = document.getElementById('username');
+    const commentInput = document.getElementById('commentInput');
+    const error = document.getElementById('error');
+
+    const name = nameInput.value.trim();
+    const comment = commentInput.value.trim();
+
+    if (!name || !comment) {
+      error.textContent = "لطفاً نام و نظر خود را وارد کنید.";
+      return;
+    }
+
+    error.textContent = "";
+
+    if (submitComment.editIndex !== undefined) {
+      // ویرایش نظر موجود
+      comments[submitComment.editIndex] = {name, text: comment};
+      submitComment.editIndex = undefined;
+    } else {
+      // افزودن نظر جدید
+      comments.push({name, text: comment});
+    }
+
+    saveComments();
+    renderComments();
+
+    nameInput.value = '';
+    commentInput.value = '';
+    submitComment.editIndex = undefined;
+  }
+
+  
+  window.onload = loadComments;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script >
 const body=document.body,
       themeBtn=document.getElementById('themeBtn'),
       hb=document.getElementById('hb'),
@@ -379,6 +752,53 @@ hb.onclick=()=>{
   hb.classList.toggle('open');
   menu.classList.toggle('show');
 };
+
 </script>
+
+
+
+
 </body>
 </html>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
